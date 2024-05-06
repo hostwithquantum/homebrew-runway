@@ -5,21 +5,21 @@
 class Runway < Formula
   desc "The runway CLI."
   homepage "https://runway.planetary-quantum.com/"
-  version "1.5.0-rc1"
+  version "1.6.0"
   license "proprietary"
 
   on_macos do
     on_intel do
-      url "https://download.runway.horse/runway/1.5.0-rc1/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e2c15014b31b207f83ebac1c02301c9d9b38276e71e027e52637239d95444b1e"
+      url "https://download.runway.horse/runway/1.6.0/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9bb2ce33ed84f90b215c8a458f143718135b3d4acfeeacf4b2a0cb33bfc756ec"
 
       def install
         bin.install "runway"
       end
     end
     on_arm do
-      url "https://download.runway.horse/runway/1.5.0-rc1/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "766cdaf4070e3c33d81ebaf3eb069a7e87c8d35eb5c3378dafb44291514f1b11"
+      url "https://download.runway.horse/runway/1.6.0/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "476a0ea5eadfd6cd94b70fb700b7d64ea9ebe150789e532cdc979f0617a8a9a6"
 
       def install
         bin.install "runway"
@@ -29,16 +29,16 @@ class Runway < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://download.runway.horse/runway/1.5.0-rc1/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "730a5beed02dcaa4b4e18c540ddef9236ab429e0ee2d18777e1077531ff4b99c"
+      url "https://download.runway.horse/runway/1.6.0/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "74c4caf3a5d696291a05438e97ece63f10943ba8add72fa60d8baa95e4b899ee"
 
       def install
         bin.install "runway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.runway.horse/runway/1.5.0-rc1/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "13eef268c28946566e43e005f6a9c6324cbaf5e82de737796be6ae462a66efb7"
+      url "https://download.runway.horse/runway/1.6.0/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9ba05596a4f20ae452e80df3c653a525a41baeca1238b629c687d2c100a0e753"
 
       def install
         bin.install "runway"
