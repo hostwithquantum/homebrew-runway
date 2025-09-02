@@ -5,21 +5,21 @@
 class Runway < Formula
   desc "The runway CLI."
   homepage "https://runway.planetary-quantum.com/"
-  version "1.17.3"
+  version "1.18.0"
   license "proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.runway.horse/runway/1.17.3/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e208e17bb3399385d7cb17208977f8274b7a9f78f4a216d3bd02461579448e90"
+      url "https://download.runway.horse/runway/1.18.0/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "300f7d48413485a132e9c8f184cd6c329fde56ffb91cd0e08597756dfeaf5942"
 
       def install
         bin.install "runway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.runway.horse/runway/1.17.3/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "de83ca4a94e68c719f04e1ed4f22b26e3fbc121fa8fd047053cd3f2c7faf8e7c"
+      url "https://download.runway.horse/runway/1.18.0/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f65e224cba57a36a8582d82abfe7b446d6f5d565237e60c3d68559dd366512bb"
 
       def install
         bin.install "runway"
@@ -29,15 +29,15 @@ class Runway < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://download.runway.horse/runway/1.17.3/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5dea58fe48319c8064ec3a0eaf82760505723d9af72edbc152d35421a18bf11a"
+      url "https://download.runway.horse/runway/1.18.0/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7209b8247ea4bbe3fafc7fe533248cc3ab0720c5d90e01c387c83f2e2eb217f0"
       def install
         bin.install "runway"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://download.runway.horse/runway/1.17.3/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "70f3fd68b564c3f9fd0335b2431ac17a732caa7698d4b043bea25689f53c5f19"
+      url "https://download.runway.horse/runway/1.18.0/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "bcf5f5aa0d0468509ddd6d37a0779e2cba370df46fcbbe62983760d991534673"
       def install
         bin.install "runway"
       end
