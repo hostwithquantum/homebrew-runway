@@ -5,21 +5,21 @@
 class Runway < Formula
   desc "The runway CLI."
   homepage "https://runway.planetary-quantum.com/"
-  version "1.42.3"
+  version "1.43.0"
   license "proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.runway.horse/runway/1.42.3/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "076fde077ef520ed385f63c836920b38301cb487bb0eb61670c986a9db843c3c"
+      url "https://download.runway.horse/runway/1.43.0/runway_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "008b5ec59d2cc0e163dfb426e8e58966bd508be28cfab6cb8fe570376e101b20"
 
       define_method(:install) do
         bin.install "runway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.runway.horse/runway/1.42.3/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2df7a76eae163752a451ae7c883a20462c7f1b3f7a7e53ec63115f8baa951943"
+      url "https://download.runway.horse/runway/1.43.0/runway_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4fac55776509c35ba89446cf06602f4557b625e2da94358bc34ed7202421cbbc"
 
       define_method(:install) do
         bin.install "runway"
@@ -29,15 +29,15 @@ class Runway < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://download.runway.horse/runway/1.42.3/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6ec820f31190d2fa8a11267b8af8fba8fd69c8ced7d6c70a64bd2f023be9a260"
+      url "https://download.runway.horse/runway/1.43.0/runway_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c427b92265411186b5c589985a7f0fca0b0fd9055c361eec770f445dd4866578"
       define_method(:install) do
         bin.install "runway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.runway.horse/runway/1.42.3/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f28deaf9eb1778388fed3a68707c1bc49796aca8a41044829855d2838f9abffd"
+      url "https://download.runway.horse/runway/1.43.0/runway_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "98028aa3ccec14a0babab89e6817fc8ce080a79392d78da39a19f29fb1a3eebd"
       define_method(:install) do
         bin.install "runway"
       end
